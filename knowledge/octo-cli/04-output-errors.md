@@ -65,7 +65,7 @@
 
 ## 七、Hint / Type / Code from status
 
-**来源**: `internal/output/errors.go#L331-L400`（`typeFromStatus` / `codeFromStatus` / `hintFromStatus`）
+**来源**: `internal/output/errors.go#L331-L382`（`typeFromStatus` / `codeFromStatus` / `hintFromStatus`）
 
 HTTP 状态码兜底映射（比如 401 → `auth` / `unauthenticated` / "请检查 token"）。
 
@@ -84,13 +84,13 @@ HTTP 状态码兜底映射（比如 401 → `auth` / `unauthenticated` / "请检
 ## 十、常见问答备答
 
 - **Q: envelope 长啥样？**
-  A: 顶层含 identity / data / pagination（可选）/ rate-limit（可选）/ error（错误时）。见 `envelope.go#L40-L127`。
+  A: 顶层含 identity / data / pagination（可选）/ rate-limit（可选）/ error（错误时）。见 `internal/output/envelope.go#L40-L127`。
 
 - **Q: 错误分几大类？**
   A: auth / validation / api / network 等，见 `errors.go` 里的 `ErrXxx` 工厂函数 `#L77-L100`。
 
 - **Q: 退出码怎么定？**
-  A: 见 `errors.go#L48-L60` 的 `ExitCode()`。
+  A: 见 `internal/output/errors.go#L48-L60` 的 `ExitCode()`。
 
 ## 十一、我不确定的
 - 完整 exit code 数值表（需精读 `ExitCode` 函数实现）

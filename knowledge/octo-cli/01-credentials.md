@@ -39,7 +39,7 @@ maskMinMiddle = 3   // 中间至少要遮盖的字符数（低于此就只保留
 
 `Provider` 是**责任链**结构，按顺序问每个 `Source`，第一个返回非 nil 的赢：
 
-**来源**: `internal/credential/provider.go#L48-L77`（Provider / NewChain / Resolve）
+**来源**: `internal/credential/provider.go#L48-L76`（Provider / NewChain / Resolve）
 
 **内置 Source 实现**：
 - `EnvProvider` —— 从环境变量读，优先级 `OCTO_TOKEN` > `OCTO_BOT_TOKEN`

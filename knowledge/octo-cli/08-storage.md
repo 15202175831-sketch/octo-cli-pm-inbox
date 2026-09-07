@@ -10,7 +10,7 @@
 
 默认目录：**`$HOME/.octo/`**（可被 `OCTO_CONFIG_DIR` 覆盖）。
 
-三个关键文件（`authstore.go#L92-L94`）：
+三个关键文件（`internal/authstore/authstore.go#L92-L94`）：
 - `configPath()` —— 档案元信息（明文 JSON）
 - `credPath()` —— **加密后的 token 密文**
 - `saltPath()` —— 加密盐
